@@ -23,7 +23,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
         <!-- CSS -->
-        <link href="assets/style/main.css" rel="stylesheet">
+        <link href="/assets/style/main.css" rel="stylesheet">
     </head>
 
     <body>
@@ -39,6 +39,27 @@
                     <span class="header__hamburger-bar"></span>
                     <span class="header__hamburger-bar"></span>
                 </button>
+
+                <!-- ナビゲーション、ヘッダーメニュー -->
+                <nav class="hamburger">
+                    <ul class="hamburger__list">
+                        <li class="hamburger__list-item">
+                            <a href="/" class="hamburger__list-item-link">
+                                <span class="hamburger__list-item-link-text">トップ</span>
+                            </a>
+                        </li>
+                        <li class="hamburger__list-item">
+                            <a href="/price" class="hamburger__list-item-link">
+                                <span class="hamburger__list-item-link-text">価格・スペック</span>
+                            </a>
+                        </li>
+                        <li class="hamburger__list-item">
+                            <a href="/faq" class="hamburger__list-item-link">
+                                <span class="hamburger__list-item-link-text">よくあるご質問</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
                 <!-- ヘッダーメニュー -->
                 <nav class="header__hamburger-menu">
@@ -60,8 +81,8 @@
                     <span class="cover__container-text">キラメキファームは革新的デザインの農業機器で未来の農業を実現。ビッグデータ・自動運転ロボット・リジェネラティブ農業で環境に優しい効率化を目指す。</span>
                 </div>
                 <picture>
-                    <source media="(min-width: 768px)" srcset="/assets/image/cover_pc.png">
-                    <img src="/assets/image/cover_sp.png" alt="" class="cover__img">
+                    <source media="(min-width: 768px)" srcset="/assets/image/cover_pc_01.png">
+                    <img src="/assets/image/cover_sp_01.png" alt="" class="cover__img">
                 </picture>
             </div>
 
@@ -255,8 +276,8 @@
             </div>
             <!-- ニュース一覧へボタン -->
             <div class="button">
-                <a href="#" class="button__background"></a>
-                <a href="#" class="button__news">ニュース一覧へ</a>
+                <a href="/news" class="button__background"></a>
+                <a href="/news" class="button__news">ニュース一覧へ</a>
             </div>
 
 
@@ -265,8 +286,8 @@
                 <!-- ナビゲーション -->
                 <nav class="footer_nav">
                     <ul class="footer_nav-list">
-                        <li class="footer_nav-list-text-first"><a href="#" class="footer_nav-list-text-first-link">価格・スペック</a></li>
-                        <li class="footer_nav-list-text-second"><a href="#" class="footer_nav-list-text-second-link">よくあるご質問</a></li>
+                        <li class="footer_nav-list-text-first"><a href="/price" class="footer_nav-list-text-first-link">価格・スペック</a></li>
+                        <li class="footer_nav-list-text-second"><a href="/faq" class="footer_nav-list-text-second-link">よくあるご質問</a></li>
                     </ul>
                 </nav>
             </footer>
