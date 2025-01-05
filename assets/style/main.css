@@ -2189,7 +2189,7 @@ ul {
 .contact__img-button {
     display: block;
     font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 2rem;
     color: #fff;
     text-align: center;
@@ -2204,6 +2204,26 @@ ul {
     border-radius: 4rem;
 }
 
+@media (min-width: 768px) {
+    .contact__img-button:hover {
+        display: block;
+        font-family: 'Noto Sans JP', sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+        color: #168352;
+        text-align: center;
+        padding-top: 1.9rem;
+        padding-bottom: 3.1rem;
+        padding-left: 11.4rem;
+        padding-right: 11.3rem;
+        margin: 0 auto;
+        width: 35.8rem;
+        height: 8rem;
+        border: .2rem solid #fff;
+        border-radius: 4rem;
+        background-color: #fff;
+    }
+}
 
 /*カバーよくあるご質問
 ------------------------------------------ */
