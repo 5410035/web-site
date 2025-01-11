@@ -90,14 +90,14 @@ ol {
     }
 }
 
-.header__img {
+.header__link-img {
     width: 19.7rem;
     height: 2.3rem;
 }
 
 
 @media (min-width: 768px) {
-    .header__img {
+    .header__link-img {
         width: 26.3rem;
         height: 3rem;
     }
