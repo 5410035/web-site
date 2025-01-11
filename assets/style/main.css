@@ -47,6 +47,10 @@ ul {
     list-style: none;
 }
 
+ol {
+    list-style: none;
+}
+
 .all {
     overflow: hidden;
 }
@@ -74,13 +78,15 @@ ul {
         left: 0;
         z-index: 1;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         background-color: #fff;
-        padding-right: 0rem;
         padding-bottom: 4.2rem;
         padding-top: 4.2rem;
-        padding-left: 0rem;
-        column-gap: 52.8rem;
+        padding-left: 1.6rem;
+        column-gap: 0.8rem;
+        max-width: 120rem;
+        margin: 0 auto;
+        padding-right: 1.6rem;
     }
 }
 
@@ -206,8 +212,9 @@ ul {
         flex-direction: column;
         top: 6.3rem;
         background-color: #168352;
-        transform: translateX(105%);
-        transition: transform 0.6s;
+        transition: all 0.6s;
+        opacity: 0;
+        visibility: hidden;
         left: 1.6rem;
         right: 1.6rem;
         padding-left: 2rem;
@@ -226,7 +233,8 @@ ul {
 
 /* アクティブ状態 */
 .hamburger__menu-active {
-    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 
@@ -242,7 +250,7 @@ ul {
 @media (min-width: 768px) {
     .cover {
         margin-top: 11.4rem;
-        padding: 3.6rem 0rem 0 0rem;
+        padding: 3.6rem 1.6rem 0 1.6rem;
     }
 }
 
@@ -254,10 +262,9 @@ ul {
     .cover__container {
         display: flex;
         flex-direction: row;
-        column-gap: 13.1rem;
         margin: 0 auto;
-        max-width: 120rem;
-        justify-content: center;
+        max-width: 110rem;
+        justify-content: space-between;
         margin-bottom: 5.8rem;
     }
 }
@@ -308,8 +315,18 @@ ul {
 .cover__img {
     display: block;
     margin: 0 auto;
-    width: 116.7rem;
+    width: 53.8rem;
 }
+
+@media (min-width: 768px) {
+    .cover__img {
+        display: block;
+        max-width: 116.7rem;
+        width: 116.7rem;
+        border-radius: 40px;
+    }
+}
+
 
 /* About Us
 ------------------------------------------ */
@@ -499,14 +516,13 @@ ul {
 .point {
     padding-top: 5.4rem;
     padding-bottom: 3.6rem;
-    background-color: #ebebeb;
+    background-color: #f3f9f6;
 }
 
 @media (min-width: 768px) {
     .point {
         padding-top: 6.2rem;
         padding-bottom: 4.3rem;
-        background-color: #ebebeb;
     }
 }
 
@@ -720,6 +736,7 @@ ul {
     column-gap: 1.7rem;
     border-radius: 2.4rem;
     margin-bottom: 2rem;
+    color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -739,12 +756,17 @@ ul {
     }
 }
 
+@media (min-width: 768px) {
+    .introduction__container-over-box:hover {
+        background-color: #dffaec;
+        color: #168352;
+    }
+}
 
 .introduction__container-over-box-text-sp {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 700;
     font-size: 1.8rem;
-    color: #fff;
     margin-top: 1.8rem;
 }
 
@@ -764,7 +786,6 @@ ul {
         font-family: 'Noto Sans JP', sans-serif;
         font-weight: 700;
         font-size: 2.4rem;
-        color: #fff;
         margin-top: 2.3rem;
     }
 }
@@ -773,7 +794,6 @@ ul {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 700;
     font-size: 1.8rem;
-    color: #fff;
     margin-top: 1.8rem;
 }
 
@@ -782,7 +802,6 @@ ul {
         font-family: 'Noto Sans JP', sans-serif;
         font-weight: 700;
         font-size: 2.4rem;
-        color: #fff;
         margin-top: 2.3rem;
     }
 }
@@ -835,6 +854,7 @@ ul {
     column-gap: 1.7rem;
     border-radius: 2.4rem;
     margin-bottom: 2rem;
+    color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -858,7 +878,6 @@ ul {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 700;
     font-size: 1.8rem;
-    color: #fff;
     margin-top: 1.8rem;
 }
 
@@ -867,7 +886,6 @@ ul {
         font-family: 'Noto Sans JP', sans-serif;
         font-weight: 700;
         font-size: 2rem;
-        color: #fff;
         margin-top: 1.8rem;
     }
 }
@@ -887,6 +905,14 @@ ul {
 .introduction__container-under-box-text-br {
     display: inline-block;
 }
+
+@media (min-width: 768px) {
+    .introduction__container-under-box:hover {
+        background-color: #dffaec;
+        color: #168352;
+    }
+}
+
 
 
 /*お客様の事例紹介
@@ -1379,6 +1405,9 @@ ul {
         margin-top: 15.4rem;
         padding-left: 10rem;
         padding-right: 10rem;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 140rem;
     }
 }
 
@@ -1492,8 +1521,11 @@ ul {
     }
 }
 
-.breadcrumb__list-arrow {
-    width: .5rem;
+.breadcrumb__list-item-link--first::after {
+    content: "›";
+    margin-left: .6rem;
+    font-size: 2rem;
+    line-height: 0;
 }
 
 /*ギャラリー
@@ -1501,8 +1533,6 @@ ul {
 
 .gallery {
     padding-top: 2.7rem;
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
 }
 
 @media (min-width: 768px) {
@@ -1513,10 +1543,17 @@ ul {
     }
 }
 
+.gallery__container {
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+}
+
 @media (min-width: 768px) {
     .gallery__container {
         max-width: 80rem;
         margin: 0 auto;
+        padding-left: 0rem;
+        padding-right: 0rem;
     }
 }
 
@@ -1582,6 +1619,10 @@ ul {
     }
 }
 
+.gallery__container-headiing-slick-item {
+    margin: 0 .8rem;
+}
+
 .gallery__container-headiing-slick-item-img {
     width: 35.8rem;
     height: 23.697rem;
@@ -1637,7 +1678,7 @@ ul {
 }
 
 .slick-dots li {
-    width: .4rem;
+    width: .6rem;
 }
 
 .slick-dots li.slick-active button:before {
@@ -2238,6 +2279,9 @@ ul {
         margin-top: 15.4rem;
         padding-left: 10rem;
         padding-right: 10rem;
+        max-width: 140rem;
+        margin-left: auto;
+        margin-right: auto
     }
 }
 
@@ -2322,14 +2366,14 @@ ul {
     padding-left: 1.6rem;
     padding-right: 1.6rem;
     padding-top: 3.5rem;
-    padding-bottom: 14.65rem;
+    padding-bottom: 14.7rem;
 }
 
 @media (min-width: 768px) {
     .question {
         padding-left: 0rem;
         padding-right: 0rem;
-        padding-top: 5.9rem;
+        padding-top: 6rem;
         padding-bottom: 4.8rem;
     }
 }
@@ -2349,7 +2393,6 @@ ul {
     border: .1rem solid #ccc;
     border-radius: 1.6rem;
     margin-bottom: 2.4rem;
-    padding-bottom: 1.77rem;
 }
 
 @media (min-width: 768px) {
@@ -2357,7 +2400,6 @@ ul {
         border: .1rem solid #ccc;
         border-radius: 1.6rem;
         margin-bottom: 2.4rem;
-        padding-bottom: 1.72rem;
     }
 }
 
@@ -2368,6 +2410,7 @@ ul {
     display: flex;
     flex-direction: row;
     column-gap: 1.5rem;
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -2377,7 +2420,8 @@ ul {
         padding-top: 2.3rem;
         display: flex;
         flex-direction: row;
-        column-gap: 1.5rem
+        column-gap: 1.5rem;
+        padding-bottom: 1.7rem;
     }
 }
 
@@ -2400,13 +2444,13 @@ ul {
 }
 
 .question__container-accordion-box-title-plus {
-    display: none;
     width: 2rem;
     height: 2rem;
     margin-top: .3rem;
 }
 
 .question__container-accordion-box-title-minus {
+    display: none;
     width: 2rem;
     height: .3rem;
     margin-top: 1.1rem;
@@ -2473,24 +2517,21 @@ ul {
     font-size: 1.6rem;
     color: #000;
     line-break: anywhere;
-    letter-spacing: .01rem;
-}
-
-.question__container-accordion-box-content-textbox-text-fifth {
-    letter-spacing: 0rem;
+    letter-spacing: .005rem;
 }
 
 .question__container-accordion-box-content-textbox {
     padding-left: 2.5rem;
     padding-right: 2.4rem;
-    padding-top: .12rem;
+    padding-top: .1rem;
 }
 
 @media (min-width: 768px) {
     .question__container-accordion-box-content-textbox {
         padding-left: 3.1rem;
         padding-right: 2.4rem;
-        padding-top: 1.82rem
+        padding-bottom: 1.8rem;
+        padding-top: 0rem;
     }
 }
 
@@ -2500,7 +2541,7 @@ ul {
 
 @media (min-width: 768px) {
     .question__container-accordion-box-content-textbox-14px {
-        padding-top: 1.8rem;
+        padding-top: 0rem;
     }
 }
 
@@ -2511,7 +2552,6 @@ ul {
 
 @media (min-width: 768px) {
     .question__container-accordion-box-content-textbox-15px {
-        padding-top: 1.8rem;
         margin-top: 0rem;
     }
 }
@@ -2522,7 +2562,7 @@ ul {
 
 @media (min-width: 768px) {
     .question__container-accordion-box-content-textbox-nineth {
-        padding-top: 1.8rem;
+        padding-top: 0rem;
     }
 }
 
@@ -2532,17 +2572,19 @@ ul {
 
 @media (min-width: 768px) {
     .question__container-accordion-box-content-textbox-fifth {
-        padding-top: 1.8rem;
+        padding-top: 0rem;
+        padding-right: 3.2rem;
+        padding-bottom: 1.9rem
     }
 }
 
 .question__container-accordion-box-content-textbox-last {
-    padding-top: 0.98rem;
+    padding-top: 0.9rem;
 }
 
 @media (min-width: 768px) {
     .question__container-accordion-box-content-textbox-last {
-        padding-top: 1.7rem;
+        padding-top: 0rem;
     }
 }
 

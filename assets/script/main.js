@@ -28,7 +28,7 @@ $(function () {
 // アコーディオン
 $('.question__container-accordion-box-title').on('click', function (e) {
     $(this).next().slideToggle();
-    $(this).find(".question__container-accordion-box-title-plus").toggleClass("question__container-accordion-box-title-open", 300);
-    $(this).find(".question__container-accordion-box-title-minus").toggleClass("question__container-accordion-box-title-close", 300);
+    $(this).find(".question__container-accordion-box-title-plus").toggleClass("question__container-accordion-box-title-close", 300);
+    $(this).find(".question__container-accordion-box-title-minus").toggleClass("question__container-accordion-box-title-open", 300);
     $(this).find(".question__container-accordion-box-content").toggleClass("question__container-accordion-box-title-open", 300);
 });
