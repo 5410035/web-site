@@ -32,3 +32,9 @@ $('.question__container-accordion-box-title').on('click', function (e) {
     $(this).find(".question__container-accordion-box-title-minus").toggleClass("question__container-accordion-box-title-open", 300);
     $(this).find(".question__container-accordion-box-content").toggleClass("question__container-accordion-box-title-open", 300);
 });
+// margin-bottomの調整
+if (parentItem.hasClass("question__container-accordion-box-title-open")) {
+    parentItem.css("margin-bottom", "12.4rem"); // 開いているとき
+} else {
+    parentItem.css("margin-bottom", "2rem"); // 閉じているとき
+}
