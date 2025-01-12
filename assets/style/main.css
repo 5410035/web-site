@@ -1131,7 +1131,7 @@ ol {
 
 .news__container-wrapper-list {
     padding-top: 1.4rem;
-    margin-bottom: .05rem;
+    margin-bottom: 0rem;
     padding-bottom: 1rem;
     border-bottom: .1rem solid #ddd;
 }
@@ -1144,8 +1144,8 @@ ol {
         padding-top: .9rem;
         padding-bottom: 1.6rem;
         border-bottom: .1rem solid #ddd;
-        margin-bottom: 0.02rem;
-        margin-top: .05rem;
+        margin-bottom: 0rem;
+        margin-top: .1rem;
     }
 }
 
@@ -1305,7 +1305,7 @@ ol {
     }
 }
 
-.footer_nav-list {
+.footer__nav-list {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1316,7 +1316,7 @@ ol {
 }
 
 @media (min-width: 768px) {
-    .footer_nav-list {
+    .footer__nav-list {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -1327,7 +1327,7 @@ ol {
     }
 }
 
-.footer_nav-list-text-first-link {
+.footer__nav-list-text-first-link {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 400;
     font-size: 1.3rem;
@@ -1336,7 +1336,7 @@ ol {
 }
 
 @media (min-width: 768px) {
-    .footer_nav-list-text-first-link {
+    .footer__nav-list-text-first-link {
         font-family: 'Noto Sans JP', sans-serif;
         font-weight: 400;
         font-size: 1.5rem;
@@ -1344,7 +1344,7 @@ ol {
     }
 }
 
-.footer_nav-list-text-second-link {
+.footer__nav-list-text-second-link {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 400;
     font-size: 1.3rem;
@@ -1353,7 +1353,7 @@ ol {
 }
 
 @media (min-width: 768px) {
-    .footer_nav-list-text-second-link {
+    .footer__nav-list-text-second-link {
         font-family: 'Noto Sans JP', sans-serif;
         font-weight: 400;
         font-size: 1.4rem;
@@ -1362,7 +1362,7 @@ ol {
 }
 
 
-.footer_nav-list li:first-child {
+.footer__nav-list li:first-child {
     position: relative;
     padding-right: 1.8rem;
     margin-right: 1.5rem;
@@ -1370,14 +1370,14 @@ ol {
 
 
 @media (min-width: 768px) {
-    .footer_nav-list li:first-child {
+    .footer__nav-list li:first-child {
         position: relative;
         padding-right: 2.3rem;
         margin-right: 1.8rem;
     }
 }
 
-.footer_nav-list li:first-child::after {
+.footer__nav-list li:first-child::after {
     content: "";
     position: absolute;
     top: .2rem;
@@ -1388,7 +1388,7 @@ ol {
 }
 
 @media (min-width: 768px) {
-    .footer_nav-list li:first-child::after {
+    .footer__nav-list li:first-child::after {
         content: "";
         position: absolute;
         top: .1rem;
@@ -1539,7 +1539,7 @@ ol {
 .breadcrumb__list-item-link--first::after {
     content: "";
     display: inline-block;
-    background-image: url('/assets/image/breadcrumb_arrow.png');
+    background-image: url('/assets/image/breadcrumb_arrow.svg');
     background-position: center;
     background-size: contain;
     width: .5rem;
@@ -1727,10 +1727,9 @@ ol {
 ------------------------------------------ */
 
 .features {
-    padding-top: 2.5rem;
-    padding-left: 1.6rem;
+    padding-top: 2.4rem;
+    padding-left: 1.5rem;
     padding-right: 1.6rem;
-
 }
 
 @media (min-width: 768px) {
@@ -1762,10 +1761,11 @@ ol {
 .features__container-headiing::before {
     content: '';
     position: absolute;
-    top: 107.2%;
-    width: 13.9%;
+    top: 109.2%;
+    width: 14.2%;
     height: .3rem;
     background: #168352;
+    left: 0.3%;
 }
 
 @media (min-width: 768px) {
@@ -1782,11 +1782,11 @@ ol {
 .features__container-headiing::after {
     content: '';
     position: absolute;
-    top: 107.2%;
+    top: 109.1%;
     width: 86.1%;
     height: .3rem;
     background: #ddd;
-    left: 13.9%;
+    left: 14.2%;
 }
 
 @media (min-width: 768px) {
@@ -1975,7 +1975,7 @@ ol {
     padding-top: 4.4rem;
     padding-left: 1.6rem;
     padding-right: 1.6rem;
-    margin-bottom: 6.55rem;
+    margin-bottom: 6.5rem;
 
 }
 
@@ -2003,7 +2003,7 @@ ol {
     font-weight: 700;
     font-size: 2.2rem;
     color: #000;
-    margin-bottom: 2.6rem;
+    margin-bottom: 2.7rem;
     position: relative;
 }
 
@@ -2021,7 +2021,7 @@ ol {
 .spec__container-headiing::before {
     content: '';
     position: absolute;
-    top: 107.2%;
+    top: 109.1%;
     width: 13.9%;
     height: .3rem;
     background: #168352;
@@ -2041,7 +2041,7 @@ ol {
 .spec__container-headiing::after {
     content: '';
     position: absolute;
-    top: 107.2%;
+    top: 109.1%;
     width: 86.1%;
     height: .3rem;
     background: #ddd;
@@ -2162,6 +2162,7 @@ ol {
     padding-top: 1rem;
     padding-bottom: 1.16rem;
     line-height: 1;
+    letter-spacing: 0.01rem;
 }
 
 @media (min-width: 768px) {
