@@ -7,11 +7,11 @@ html {
 
 @media (min-width:768px) {
     html {
-        font-size: calc(10 * 100vw / 1200);
+        font-size: calc(10 * 100vw / 1240);
     }
 }
 
-@media (min-width: 1030px) {
+@media (min-width: 1240px) {
     html {
         font-size: 62.5%;
     }
@@ -476,7 +476,7 @@ ol {
         padding-top: 10rem;
         padding-bottom: 1.8rem;
         margin-left: auto;
-        width: 40.963rem;
+        width: 41.2rem;
     }
 }
 
@@ -512,7 +512,8 @@ ol {
         font-weight: 700;
         font-size: 1.5rem;
         color: #111;
-        width: 40.963rem;
+        width: 41.2rem;
+        letter-spacing: 0.004em
     }
 }
 
@@ -526,11 +527,17 @@ ol {
     }
 }
 
+@media (min-width: 768px) {
+    .about__container-wrapper-img-box-text-title-pc {
+        display: inline-block;
+    }
+}
+
 /* 3つのポイント
 ------------------------------------------ */
 .point {
     padding-top: 5.4rem;
-    padding-bottom: 3.6rem;
+    padding-bottom: 3.5rem;
     background-color: #f3f9f6;
 }
 
@@ -657,6 +664,22 @@ ol {
         padding-left: 2rem;
         padding-right: 2rem;
     }
+}
+
+.point__text--space {
+    letter-spacing: 0.005em;
+    ;
+}
+
+@media (min-width: 768px) {
+    .point__text--space {
+        letter-spacing: 0em;
+    }
+}
+
+.point__text--last{
+    padding-top: .2rem;
+    line-height: 1.7;
 }
 
 /* 製品・サービス紹介
@@ -1354,7 +1377,7 @@ ol {
     }
 }
 
-.footer__list li {
+.footer__list li:not(.footer__list-item--last) {
     position: relative;
     padding-right: 1.8rem;
     margin-right: 1.5rem;
@@ -1362,14 +1385,14 @@ ol {
 
 
 @media (min-width: 768px) {
-    .footer__list li {
+    .footer__list li:not(.footer__list-item--last) {
         position: relative;
         padding-right: 2.3rem;
         margin-right: 1.8rem;
     }
 }
 
-.footer__list li:not(.footer__list--last)::after {
+.footer__list li:not(.footer__list-item--last)::after {
     content: "";
     position: absolute;
     top: .2rem;
@@ -1380,7 +1403,7 @@ ol {
 }
 
 @media (min-width: 768px) {
-    .footer__list li:not(.footer__list--last)::after {
+    .footer__list li:not(.footer__list-item--last)::after {
         content: "";
         position: absolute;
         top: .1rem;
@@ -2486,7 +2509,8 @@ ol {
     font-weight: 700;
     font-size: 2.4rem;
     color: #168352;
-    line-height: 0.9
+    line-height: 0.9;
+    margin-top: .3rem;
 }
 
 @media (min-width: 768px) {
@@ -2495,6 +2519,7 @@ ol {
         font-weight: 700;
         font-size: 2.4rem;
         color: #168352;
+        margin-top: 0rem;
     }
 }
 
@@ -2589,6 +2614,7 @@ ol {
 @media (min-width: 768px) {
     .question__container-accordion-box-content-textbox-text {
         margin-top: 0rem;
+        letter-spacing: .004em;
     }
 }
 
@@ -2627,14 +2653,6 @@ ol {
 
 .question__container-accordion-box-title-18px {
     padding-bottom: 1.8rem;
-    padding-top: 2rem;
-}
-
-@media (min-width: 768px) {
-    .question__container-accordion-box-title-18px {
-        padding-bottom: 1.8rem;
-        padding-top: 2rem;
-    }
 }
 
 .question__container-accordion-box-content-textbox-14px {
@@ -2743,5 +2761,15 @@ ol {
 @media (min-width: 768px) {
     .question__container-accordion-box-content-fifth {
         padding-top: 0rem;
+    }
+}
+
+.question__container-accordion-box-title--eight{
+    padding-top: 2.2rem;
+}
+
+@media (min-width: 768px) {
+    .question__container-accordion-box-title--eight{
+        padding-top: 2rem;
     }
 }
