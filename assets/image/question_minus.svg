@@ -1,3 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="3" viewBox="0 0 20 3">
-  <image id="icon-minus" width="20" height="3" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAATElEQVQImWJkYGAQZWBgiGBgYGBmoAz8ZWBgWAEAAAD//2JhYGBIZGBg6KTQMAhgYOAEAAAA//8CGTifgYHhO1VcyMCwAgAAAP//AwCKvwZQHpyq6QAAAABJRU5ErkJggg=="/>
-</svg>
+<svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m21 11.75c0-.414-.336-.75-.75-.75h-16.5c-.414 0-.75.336-.75.75s.336.75.75.75h16.5c.414 0 .75-.336.75-.75z" fill-rule="nonzero"/></svg>

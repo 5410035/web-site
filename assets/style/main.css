@@ -516,6 +516,10 @@ ol {
     }
 }
 
+.about__container-wrapper-img-box-text-title-br {
+    display: inline-block;
+}
+
 @media (min-width: 768px) {
     .about__container-wrapper-img-box-text-title-br {
         display: inline-block;
@@ -939,7 +943,7 @@ ol {
 @media (min-width: 768px) {
     .case {
         padding-top: 6.2rem;
-        padding-bottom: 3.5rem;
+        padding-bottom: 3.2rem;
         background-color: #f3f9f6;
     }
 }
@@ -1141,11 +1145,17 @@ ol {
         display: flex;
         flex-direction: row;
         column-gap: .2rem;
-        padding-top: .9rem;
+        padding-top: .8rem;
         padding-bottom: 1.6rem;
         border-bottom: .1rem solid #ddd;
         margin-bottom: 0rem;
         margin-top: .1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .news__container-wrapper-list--fifth {
+        padding-top: 1rem;
     }
 }
 
@@ -1305,7 +1315,7 @@ ol {
     }
 }
 
-.footer__nav-list {
+.footer__list {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -1316,7 +1326,7 @@ ol {
 }
 
 @media (min-width: 768px) {
-    .footer__nav-list {
+    .footer__list {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -1327,7 +1337,7 @@ ol {
     }
 }
 
-.footer__nav-list-text-first-link {
+.footer__list-item-link {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 400;
     font-size: 1.3rem;
@@ -1336,7 +1346,7 @@ ol {
 }
 
 @media (min-width: 768px) {
-    .footer__nav-list-text-first-link {
+    .footer__list-item-link {
         font-family: 'Noto Sans JP', sans-serif;
         font-weight: 400;
         font-size: 1.5rem;
@@ -1344,25 +1354,7 @@ ol {
     }
 }
 
-.footer__nav-list-text-second-link {
-    font-family: 'Noto Sans JP', sans-serif;
-    font-weight: 400;
-    font-size: 1.3rem;
-    color: #fff;
-    margin-left: .1rem;
-}
-
-@media (min-width: 768px) {
-    .footer__nav-list-text-second-link {
-        font-family: 'Noto Sans JP', sans-serif;
-        font-weight: 400;
-        font-size: 1.4rem;
-        color: #fff;
-    }
-}
-
-
-.footer__nav-list li:first-child {
+.footer__list li {
     position: relative;
     padding-right: 1.8rem;
     margin-right: 1.5rem;
@@ -1370,14 +1362,14 @@ ol {
 
 
 @media (min-width: 768px) {
-    .footer__nav-list li:first-child {
+    .footer__list li {
         position: relative;
         padding-right: 2.3rem;
         margin-right: 1.8rem;
     }
 }
 
-.footer__nav-list li:first-child::after {
+.footer__list li:not(.footer__list--last)::after {
     content: "";
     position: absolute;
     top: .2rem;
@@ -1388,7 +1380,7 @@ ol {
 }
 
 @media (min-width: 768px) {
-    .footer__nav-list li:first-child::after {
+    .footer__list li:not(.footer__list--last)::after {
         content: "";
         position: absolute;
         top: .1rem;
@@ -1398,7 +1390,6 @@ ol {
         background-color: #fff;
     }
 }
-
 
 /*価格・スペック
 ------------------------------------------ */
@@ -2074,7 +2065,7 @@ ol {
     font-size: 2rem;
     color: #000;
     margin-left: 1.8rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.4rem;
 }
 
 @media (min-width: 768px) {
@@ -2123,8 +2114,8 @@ ol {
     border-left: solid .1rem #ddd;
     border-right: solid .1rem #ddd;
     background-color: #f5f5f5;
-    padding-left: 2rem;
-    padding-top: 1.1rem;
+    padding-left: 1.9rem;
+    padding-top: 1rem;
     padding-bottom: 1.2rem;
     line-height: 1;
 }
@@ -2139,7 +2130,7 @@ ol {
         border-left: solid .1rem #ddd;
         border-right: solid .1rem #ddd;
         background-color: #f5f5f5;
-        padding-left: 2rem;
+        padding-left: 1.9rem;
         padding-top: 2.2rem;
         padding-bottom: .5rem;
         width: 20rem;
@@ -2160,7 +2151,7 @@ ol {
     background-color: #fff;
     padding-left: 1.8rem;
     padding-top: 1rem;
-    padding-bottom: 1.16rem;
+    padding-bottom: 1.2rem;
     line-height: 1;
     letter-spacing: 0.01rem;
 }
@@ -2444,8 +2435,8 @@ ol {
 
 .question__container-accordion-box-title {
     padding-left: 2.4rem;
-    padding-right: 2.4rem;
-    padding-top: 2.3rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
     display: flex;
     flex-direction: row;
     column-gap: 1.6rem;
@@ -2453,11 +2444,35 @@ ol {
     padding-bottom: 1.7rem;
 }
 
+.question__container-accordion-box-title::after {
+    content: "";
+    display: inline-block;
+    background-image: url('/assets/image/question_plus.svg');
+    background-position: center;
+    background-size: contain;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: .5rem;
+}
+
+@media (min-width: 768px) {
+    .question__container-accordion-box-title::after {
+        margin-top: .3rem;
+        margin-left: .2rem;
+    }
+}
+
+.question__container-accordion-box-title--active::after {
+    background-image: url('/assets/image/question_minus.svg');
+    margin-top: .3rem;
+}
+
+
 @media (min-width: 768px) {
     .question__container-accordion-box-title {
         padding-left: 3.1rem;
-        padding-right: 3.3rem;
-        padding-top: 2.3rem;
+        padding-right: 2.3rem;
+        padding-top: 2rem;
         display: flex;
         flex-direction: row;
         column-gap: 1.5rem;
@@ -2486,7 +2501,7 @@ ol {
 .question__container-accordion-box-title-plus {
     width: 2rem;
     height: 2rem;
-    margin-top: .3rem;
+    margin-top: .5rem;
 }
 
 .question__container-accordion-box-title-minus {
@@ -2500,6 +2515,7 @@ ol {
     display: flex;
     flex-direction: row;
     column-gap: .8rem;
+    margin-top: .2rem;
 }
 
 .question__container-accordion-box-title-center-bage-text {
@@ -2536,7 +2552,7 @@ ol {
     font-weight: 700;
     font-size: 1.6rem;
     color: #000;
-    width: 23.1rem;
+    width: 22.4rem;
     line-break: anywhere;
 }
 
@@ -2546,7 +2562,7 @@ ol {
         font-weight: 700;
         font-size: 1.8rem;
         color: #000;
-        width: 66rem;
+        width: 65.6rem;
         line-break: anywhere;
     }
 }
@@ -2578,7 +2594,7 @@ ol {
 
 .question__container-accordion-box-content-textbox {
     padding-left: 2.5rem;
-    padding-right: 2.2rem;
+    padding-right: 2.1rem;
     padding-top: .1rem;
     padding-bottom: 1.8rem;
 }
@@ -2593,27 +2609,31 @@ ol {
 }
 
 .question__container-accordion-box-title-forth {
-    padding-top: 2.3rem;
-    padding-bottom: 1.8rem;
+    padding-top: 2rem;
+    padding-bottom: 1.6rem
 }
 
 .question__container-accordion-box-content-forth {
     margin-bottom: -.2rem;
+    padding-top: .3rem;
 }
 
 @media (min-width: 768px) {
     .question__container-accordion-box-content-forth {
         margin-bottom: 0rem;
+        padding-top: 0rem;
     }
 }
 
 .question__container-accordion-box-title-18px {
     padding-bottom: 1.8rem;
+    padding-top: 2rem;
 }
 
 @media (min-width: 768px) {
     .question__container-accordion-box-title-18px {
-        padding-bottom: 1.7rem;
+        padding-bottom: 1.8rem;
+        padding-top: 2rem;
     }
 }
 
@@ -2624,6 +2644,7 @@ ol {
 @media (min-width: 768px) {
     .question__container-accordion-box-content-textbox-14px {
         padding-top: 0rem;
+        padding-bottom: 2rem;
     }
 }
 
@@ -2661,7 +2682,7 @@ ol {
 
 
 .question__container-accordion-box-content-textbox-last {
-    padding-top: 0.7rem;
+    padding-top: .8rem;
 }
 
 @media (min-width: 768px) {
@@ -2687,9 +2708,7 @@ ol {
     display: none;
 }
 
-.question__container-accordion-box-title-open {
-    display: block;
-}
+
 
 .question__container-accordion-box-title-close {
     display: none;
@@ -2709,9 +2728,20 @@ ol {
     padding-bottom: 1.7rem;
 }
 
-
 @media (min-width: 768px) {
     .question__container-accordion-box-content-textbox--sixth {
-        padding-bottom: 1.9rem;
+        padding-bottom: 1.8rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .question__container-accordion-box-title-fifth {
+        padding-top: 2.2rem
+    }
+}
+
+@media (min-width: 768px) {
+    .question__container-accordion-box-content-fifth {
+        padding-top: 0rem;
     }
 }

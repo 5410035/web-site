@@ -22,13 +22,15 @@ $(function () {
         slidesToScroll: 1,
         fade: false,
         initialSlide: 0,
+        autoplay: true,
+        speed: 1000,
+        autoplaySpeed: 5000,
     });
 });
 
 // アコーディオン
 $('.question__container-accordion-box-title').on('click', function (e) {
     $(this).next().slideToggle();
-    $(this).find(".question__container-accordion-box-title-plus").toggleClass("question__container-accordion-box-title-close", 300);
-    $(this).find(".question__container-accordion-box-title-minus").toggleClass("question__container-accordion-box-title-open", 300);
-    $(this).find(".question__container-accordion-box-content").toggleClass("question__container-accordion-box-title-open", 300);
+    $(this).toggleClass("question__container-accordion-box-title--active", 300);
 });
+
